@@ -89,6 +89,7 @@ client.create2(
     cookie:          File.read('/home/leandro/Desktop/leandro-sardi.json')
 )
 # => "abc123xy" (profile ID)
+```
 
 ## 4. Deleting Profile
 
