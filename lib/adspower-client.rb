@@ -358,8 +358,11 @@ class AdsPowerClient
         lang = COUNTRY_LANG[geo[:country_code]] || "en-US"
         screen_res = "1920_1080"
 
+        the_url = "#{adspower_listener}:#{port}/api/#{api_version}/browser-profile/create"
+        the_url = "#{adspower_listener}:#{port}/api/#{api_version}/user/create" if api_version == 'v1'
+
         with_lock do
-            url = "#{adspower_listener}:#{port}/api/#{api_version}/browser-profile/create"
+            url = the_url
             body = {
                 # ─── GENERAL & PROXY ─────────────────────────────
                 'name'            => name,
