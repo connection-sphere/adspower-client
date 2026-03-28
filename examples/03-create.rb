@@ -1,4 +1,4 @@
-require_relative '../config.rb'
+require_relative './config.rb'
 require_relative '../lib/adspower-client.rb'
 require 'pry'
 
@@ -11,12 +11,13 @@ puts client.online? ? 'yes' : 'no'
 
 print 'Creating profile... '
 profile_id = client.create2(
+    api_version:        'v1',
     name:               'Example Profile 03',
     proxy_config: {
         proxy_soft:     'other',
         proxy_type:     'http',
-        ip:             '55.55.55.55',
-        port:           49656,
+        ip:             'xxx.xxx.xxx.xxx',
+        port:           49493,
         user:           '***************',
         password:       '***************'
     },
